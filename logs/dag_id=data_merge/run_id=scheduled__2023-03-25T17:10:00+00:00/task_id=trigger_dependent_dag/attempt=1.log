@@ -1,0 +1,25 @@
+[2023-03-25T17:15:01.035+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_merge.trigger_dependent_dag scheduled__2023-03-25T17:10:00+00:00 [queued]>
+[2023-03-25T17:15:01.047+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_merge.trigger_dependent_dag scheduled__2023-03-25T17:10:00+00:00 [queued]>
+[2023-03-25T17:15:01.047+0000] {taskinstance.py:1282} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-25T17:15:01.047+0000] {taskinstance.py:1283} INFO - Starting attempt 1 of 2
+[2023-03-25T17:15:01.047+0000] {taskinstance.py:1284} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-25T17:15:01.062+0000] {taskinstance.py:1303} INFO - Executing <Task(TriggerDagRunOperator): trigger_dependent_dag> on 2023-03-25 17:10:00+00:00
+[2023-03-25T17:15:01.066+0000] {standard_task_runner.py:55} INFO - Started process 183 to run task
+[2023-03-25T17:15:01.073+0000] {standard_task_runner.py:82} INFO - Running: ['airflow', 'tasks', 'run', 'data_merge', 'trigger_dependent_dag', 'scheduled__2023-03-25T17:10:00+00:00', '--job-id', '555', '--raw', '--subdir', 'DAGS_FOLDER/data_merge.py', '--cfg-path', '/tmp/tmpm8km2_am']
+[2023-03-25T17:15:01.074+0000] {standard_task_runner.py:83} INFO - Job 555: Subtask trigger_dependent_dag
+[2023-03-25T17:15:01.145+0000] {task_command.py:388} INFO - Running <TaskInstance: data_merge.trigger_dependent_dag scheduled__2023-03-25T17:10:00+00:00 [running]> on host b011aab24652
+[2023-03-25T17:15:01.218+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_merge
+AIRFLOW_CTX_TASK_ID=trigger_dependent_dag
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-25T17:10:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-25T17:10:00+00:00
+[2023-03-25T17:15:03.052+0000] {trigger_dagrun.py:177} INFO - Waiting for currency on 2023-03-25T17:15:01.218531+00:00 to become allowed state ['success'] ...
+[2023-03-25T17:16:03.124+0000] {trigger_dagrun.py:177} INFO - Waiting for currency on 2023-03-25T17:15:01.218531+00:00 to become allowed state ['success'] ...
+[2023-03-25T17:17:03.198+0000] {trigger_dagrun.py:186} INFO - currency finished with allowed state success
+[2023-03-25T17:17:03.212+0000] {taskinstance.py:1326} INFO - Marking task as SUCCESS. dag_id=data_merge, task_id=trigger_dependent_dag, execution_date=20230325T171000, start_date=20230325T171501, end_date=20230325T171703
+[2023-03-25T17:17:03.252+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-03-25T17:17:03.280+0000] {taskinstance.py:2585} INFO - 1 downstream tasks scheduled from follow-on schedule check

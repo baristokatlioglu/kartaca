@@ -1,0 +1,24 @@
+[2023-03-25T18:05:17.055+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_merge.final_task scheduled__2023-03-25T17:10:00+00:00 [queued]>
+[2023-03-25T18:05:17.066+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_merge.final_task scheduled__2023-03-25T17:10:00+00:00 [queued]>
+[2023-03-25T18:05:17.067+0000] {taskinstance.py:1282} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-25T18:05:17.067+0000] {taskinstance.py:1283} INFO - Starting attempt 1 of 2
+[2023-03-25T18:05:17.067+0000] {taskinstance.py:1284} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-25T18:05:17.080+0000] {taskinstance.py:1303} INFO - Executing <Task(PythonOperator): final_task> on 2023-03-25 17:10:00+00:00
+[2023-03-25T18:05:17.084+0000] {standard_task_runner.py:55} INFO - Started process 66 to run task
+[2023-03-25T18:05:17.086+0000] {standard_task_runner.py:82} INFO - Running: ['airflow', 'tasks', 'run', 'data_merge', 'final_task', 'scheduled__2023-03-25T17:10:00+00:00', '--job-id', '586', '--raw', '--subdir', 'DAGS_FOLDER/data_merge.py', '--cfg-path', '/tmp/tmpy5iv5sko']
+[2023-03-25T18:05:17.087+0000] {standard_task_runner.py:83} INFO - Job 586: Subtask final_task
+[2023-03-25T18:05:17.162+0000] {task_command.py:388} INFO - Running <TaskInstance: data_merge.final_task scheduled__2023-03-25T17:10:00+00:00 [running]> on host 6a3dd33bd601
+[2023-03-25T18:05:17.252+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_merge
+AIRFLOW_CTX_TASK_ID=final_task
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-25T17:10:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-25T17:10:00+00:00
+[2023-03-25T18:05:17.253+0000] {data_merge.py:47} INFO - data_merge DAG has been finished
+[2023-03-25T18:05:17.253+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-03-25T18:05:17.263+0000] {taskinstance.py:1326} INFO - Marking task as SUCCESS. dag_id=data_merge, task_id=final_task, execution_date=20230325T171000, start_date=20230325T180517, end_date=20230325T180517
+[2023-03-25T18:05:17.305+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-03-25T18:05:17.325+0000] {taskinstance.py:2585} INFO - 0 downstream tasks scheduled from follow-on schedule check
